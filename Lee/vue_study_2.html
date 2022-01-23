@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>상띵머</title>
+    <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+
+    <!--vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--부트스트랩-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body> <!--div-->
+    <header> <!--헤더-->
+        <div class="card" id="header">
+            <div class="row" id="boarder">
+                <div class="col-3" id="header_left">
+                    <a href="url" class="col-2">홈버튼</a>
+                    <a href="url" class="col-2">커뮤니티버튼</a>
+                </div>
+                <div class="col-6" id="header_main_text" >
+                    <img src="around.png" alt="My Image">
+                </div>
+                <div class="col" id="header_right">
+                    <div id="header_contents" style="text-align: center;">
+                        <dt>
+                        <dd v-for="todo in contents" style="display: inline; font-size: small;" class="col">
+                            {{ todo.text }}
+                        </dd>
+                        </dt>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="menu_bar_header" style="text-align: center;">
+                    <dt>
+                    <dd v-for="todo in contents" style="display: inline; font-size: small;" class="col">
+                        {{ todo.text }}
+                    </dd>
+                    </dt>
+                </div>            
+            </div>
+        </div>
+    </header>
+
+    <div> <!--메인 큰 사진-->
+        <img src="product_1.jpg" alt="My Image">
+    </div>
+
+    <div class="container"> <!--하위 컨텐츠 1-->
+        <div class="contents">
+            <img src="product_2.jpg" alt="...">
+            <p>어라운드의 연말룩</p>
+        </div>
+        <div class="contents">
+            <img src="product_3.jpg" alt="...">
+            <p>따뜻한 니트아이템</p>
+        </div>
+        <div class="contents">
+            <img src="product_4.jpg" alt="...">
+            <p>포토리뷰</p>
+        </div>
+        <div class="contents">
+            <img src="product_5.jpg" alt="...">
+            <p>매주 사랑받는 아이템</p>
+        </div>
+    </div>
+
+    <div class="container_2"><!--하위 컨텐츠 2-->
+        <div style="padding-top: 1%;padding-bottom: 2%;">
+            WEEKLY BEST
+        </div>
+        <div id="button_1">
+            <button v-on:click="greet" class="button">All</button>
+            <button v-on:click="greet" class="button">OUTER</button>
+            <button v-on:click="greet" class="button">DRESS</button>
+            <button v-on:click="greet" class="button">BOTTOM</button>
+            <button v-on:click="greet" class="button">ACC</button>
+        </div>
+        <div>
+            <div class="contents">
+                <img src="product_2.jpg" alt="...">
+            </div>
+            <div class="contents">
+                <img src="product_3.jpg" alt="...">
+            </div>
+            <div class="contents">
+                <img src="product_4.jpg" alt="...">
+            </div>
+            <div class="contents">
+                <img src="product_5.jpg" alt="...">
+        </div>
+        <div>
+            <div class="contents">
+                <img src="product_2.jpg" alt="...">
+            </div>
+            <div class="contents">
+                <img src="product_3.jpg" alt="...">
+            </div>
+            <div class="contents">
+                <img src="product_4.jpg" alt="...">
+            </div>
+            <div class="contents">
+                <img src="product_5.jpg" alt="...">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div><!--하위 컨텐츠 3-->
+        <div class="container"> 
+            <div class="contents">
+                <img src="product_2.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>빵빵한 오리털 안감으로 더욱 따뜻하게 입을 수 있는 패딩점퍼!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_3.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>made by around. 초겨울까지 입을 수 있는 핸드메이드 아이템:)
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_4.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>캐시미어 함유로 더욱 부드럽게 착용이 가능해요!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_5.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>안감포함으로 더욱 따뜻하게 입을 수 있는 핸메코트!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_2.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>빵빵한 오리털 안감으로 더욱 따뜻하게 입을 수 있는 패딩점퍼!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_3.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>made by around. 초겨울까지 입을 수 있는 핸드메이드 아이템:)
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_4.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>캐시미어 함유로 더욱 부드럽게 착용이 가능해요!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_5.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>안감포함으로 더욱 따뜻하게 입을 수 있는 핸메코트!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_2.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>빵빵한 오리털 안감으로 더욱 따뜻하게 입을 수 있는 패딩점퍼!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_3.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>made by around. 초겨울까지 입을 수 있는 핸드메이드 아이템:)
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_4.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>캐시미어 함유로 더욱 부드럽게 착용이 가능해요!
+                </p>
+            </div>
+            <div class="contents">
+                <img src="product_5.jpg" alt="...">
+                <p style="text-align: left;">
+                    [무료배송 | 당일배송] 오리털90 패딩
+                    <br/>안감포함으로 더욱 따뜻하게 입을 수 있는 핸메코트!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer_div">
+        Company: 어라운드
+        <br/>Ceo: 어라운드Personal info manager 쇼디자인
+        <br/>tel: 1588-0000E-mail: showdesign7@naver.com
+        <br/>Company Reg.No: 1234-12345[사업자정보확인]
+        <br/>Network Reg.No: 서울1234호
+        <br/>Address: 06129 서울특별시 강남구 강남대로100길 20 (역삼동) 샘플주소입니다.
+        <br/>모든이미지는 어라운드의 소유로 법적인 보호를 받고 있습니다. 무단게재 및 도용시 저작권법에 의해 형사고발 및 손해배상을 묻습니다.
+        <br/>Copyright ? 어라운드. All rights reserved. Designed by Showdesign
+    </div>
+    <div id="footer_div">
+        Company: 어라운드
+        <br/>Ceo: 어라운드Personal info manager 쇼디자인
+        <br/>tel: 1588-0000E-mail: showdesign7@naver.com
+        <br/>Company Reg.No: 1234-12345[사업자정보확인]
+        <br/>Network Reg.No: 서울1234호
+        <br/>Address: 06129 서울특별시 강남구 강남대로100길 20 (역삼동) 샘플주소입니다.
+        <br/>모든이미지는 어라운드의 소유로 법적인 보호를 받고 있습니다. 무단게재 및 도용시 저작권법에 의해 형사고발 및 손해배상을 묻습니다.
+        <br/>Copyright ? 어라운드. All rights reserved. Designed by Showdesign
+    </div>
+    <div id="footer_div">
+        Company: 어라운드
+        <br/>Ceo: 어라운드Personal info manager 쇼디자인
+        <br/>tel: 1588-0000E-mail: showdesign7@naver.com
+        <br/>Company Reg.No: 1234-12345[사업자정보확인]
+        <br/>Network Reg.No: 서울1234호
+        <br/>Address: 06129 서울특별시 강남구 강남대로100길 20 (역삼동) 샘플주소입니다.
+        <br/>모든이미지는 어라운드의 소유로 법적인 보호를 받고 있습니다. 무단게재 및 도용시 저작권법에 의해 형사고발 및 손해배상을 묻습니다.
+        <br/>Copyright ? 어라운드. All rights reserved. Designed by Showdesign
+    </div>
+    <div id="footer_div">
+        Company: 어라운드
+        <br/>Ceo: 어라운드Personal info manager 쇼디자인
+        <br/>tel: 1588-0000E-mail: showdesign7@naver.com
+        <br/>Company Reg.No: 1234-12345[사업자정보확인]
+        <br/>Network Reg.No: 서울1234호
+        <br/>Address: 06129 서울특별시 강남구 강남대로100길 20 (역삼동) 샘플주소입니다.
+        <br/>모든이미지는 어라운드의 소유로 법적인 보호를 받고 있습니다. 무단게재 및 도용시 저작권법에 의해 형사고발 및 손해배상을 묻습니다.
+        <br/>Copyright ? 어라운드. All rights reserved. Designed by Showdesign
+    </div>
+    <div class="card-header">
+        <div id="footer_bottom" style="text-align: center;">
+            <dt>
+                <dd v-for="todo in contents" style="display: inline; font-size: small;" class="col">
+                    {{ todo.text }}
+                </dd>
+            </dt>
+        </div>
+    </div>
+    
+
+<script>
+    var menu_bar_header = new Vue({
+        el: '#menu_bar_header',
+        data: {
+            contents: [
+                { text: 'best50' },
+                { text: 'MADE' },
+                { text: 'NEW 7%' },
+                { text: 'OUTER' },
+                { text: 'KNIT' },
+                { text: 'TOP' },
+                { text: 'PANTS' },
+                { text: 'SKIRT' },
+                { text: 'DRESS' },
+                { text: 'SHOES/BAG' },
+                { text: 'ACC' },
+                { text: '시즌오프' },
+            ]
+        }
+    })
+    
+    var lmg_contents = new Vue({
+        el: '#header_contents',
+        data: {
+            contents: [
+                { text: '로그인' },
+                { text: '회원가입' },
+                { text: '장바구니' },
+                { text: '주문조회' },
+                { text: '마이페이지' },
+            ]
+        }
+    })
+
+    var footer_bottom = new Vue({
+        el: '#footer_bottom',
+        data: {
+            contents: [
+                { text: '홈으로' },
+                { text: '회사소개' },
+                { text: '이용약관' },
+                { text: '개인정보처리방침' },
+                { text: '이용안내' },
+            ]
+        }
+    })
+
+    var example2 = new Vue({
+        el: '#button_1',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+    greet: function (event) {
+        alert('졸업시켜-줘-')
+    }
+    }
+    })
+
+</script>
+</body>
+</html>

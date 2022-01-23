@@ -1,0 +1,114 @@
+#header_main_text{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#header{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right: 0px;
+}
+
+#img_text{
+    align-items: center;
+}
+
+#boarder{
+    border-bottom: 1px solid lavender;
+}
+
+#header_left{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#footer_div{
+    float: left; 
+    width: 25%;
+    height: auto;
+    text-align: left;
+    font-size: smaller;
+    padding: 1%;
+}
+
+#header_right{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.col-2{
+    font-size: 3pt;
+}
+
+.row > div{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.container{
+    padding-top: 1%;
+    min-width: 80%;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.container .contents{
+    display:inline-block;
+    padding: 1%;
+}
+
+.footer_align{
+    float: left;
+}
+
+.img{
+    align-items: center;
+}
+
+.container_2{
+    text-align: center;
+    background-color: gainsboro;
+    padding-top: 1%;
+    min-width: 80%;
+    padding-bottom: 3%;
+}
+.container_2 .contents{
+    display:inline-block;
+    padding: 1%;
+}
+
+#cover{
+    text-align:center;
+}
+
+.button{
+    background-color: #808080;
+    border: snow;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+div>p{
+    font-size: x-small;
+    padding-top: 3%;
+}
+
+.grid {
+    margin: 0 auto;
+    text-align: left; 
+    min-width: 80%
+}
+
+.grid_item {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    align-items: center;
+}
